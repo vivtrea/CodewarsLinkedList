@@ -2,9 +2,9 @@
 
 class Node():
     '''Class for node in linked list'''
-    def __init__(self, data, next = None):
+    def __init__(self, data, next1 = None):
         self.data = data
-        self.next = next
+        self.next = next1
 
 def stringify(node: 'Node'):
     '''Convert linked list into string representation'''
