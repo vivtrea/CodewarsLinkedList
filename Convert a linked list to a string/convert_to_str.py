@@ -1,9 +1,13 @@
+'''Module provides linked list string repr conversion'''
+
 class Node():
+    '''Class for node in linked list'''
     def __init__(self, data, next = None):
         self.data = data
         self.next = next
 
 def stringify(node: 'Node'):
+    '''Convert linked list into string representation'''
     if node is None or node.data is None:
         return 'None'
 
@@ -18,7 +22,3 @@ def stringify(node: 'Node'):
     string_repr = ' -> '.join(string_repr)
 
     return string_repr
-
-print(stringify(Node(0, Node(1, Node(4, Node(9, Node(16)))))))
-print(stringify(Node(1, Node(2, Node(3)))))
-print(stringify(Node(None)))
