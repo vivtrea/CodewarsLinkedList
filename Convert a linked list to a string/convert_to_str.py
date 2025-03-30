@@ -4,19 +4,18 @@ class Node():
         self.next = next
 
 def stringify(node: 'Node'):
-    head = node.data
-    if head is None:
+    if node is None or node.data is None:
         return 'None'
 
-    string_repr = f'{head}'
-    current_node = node.next
+    string_repr = []
+    current_node = node
 
-    while current_node.data is not None:
-        string_repr += f' -> {current_node.data}'
+    while current_node is not None:
+        string_repr.append(str(current_node.data))
         current_node = current_node.next
-        if current_node is None:
-            break
-    string_repr += ' -> None'
+
+    string_repr.append('None')
+    string_repr = ' -> '.join(string_repr)
 
     return string_repr
 
