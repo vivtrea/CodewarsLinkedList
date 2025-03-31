@@ -2,8 +2,8 @@
 
 class Node:
     '''Node class'''
-    def __init__(self, next=None):
-        self.next = next
+    def __init__(self, next1=None):
+        self.next = next1
 
 def loop_size(node):
     '''Detect loop and its length'''
