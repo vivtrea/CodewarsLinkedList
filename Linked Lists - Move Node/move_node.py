@@ -5,7 +5,7 @@ class Node(object):
     def __init__(self, data):
         self.data = data
         self.next = None
- 
+
 class Context(object):
     '''Contains source and destination'''
     def __init__(self, source, dest):
